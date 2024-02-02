@@ -15,7 +15,6 @@ function Todo({ todo, toggleTodo, deleteTodo }) {
                 <input type='checkbox' checked={todo.completed} onChange={handleChange}></input>
                 <div>{todo.name}</div>
                 <button onClick={handleDelete}>Delete</button>
-                <button>Edit</button>
             </div>
         </>
     )

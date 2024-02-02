@@ -3,6 +3,8 @@ import AddTask from './components/AddTask'
 import Todolist from './components/Todolist'
 import { v4 as uuidv4 } from 'uuid';
 
+import './style.css'
+
 function App() {
   const TODOLIST_KEY = 'todoList'
   const [todoList, setTodoList] = useState(() => {
@@ -32,13 +34,12 @@ function App() {
     setTodoList(filteredList);
   }
 
-
   return (
-    <>
-      <h1>Todo List</h1>
+    <div className='container'>
+      <div className='title'>Todo List</div>
       <AddTask addTask={addTask}></AddTask>
       <Todolist todoList={todoList} toggleTodo={toggleTodo} deleteTodo={deleteTodo}></Todolist>
-    </>
+    </div>
   )
 }
 
