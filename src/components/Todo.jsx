@@ -1,12 +1,20 @@
 import React from 'react'
 
-function Todo({ todo }) {
+function Todo({ todo, toggleTodo, deleteTodo }) {
+    function handleChange() {
+        toggleTodo(todo.id)
+    }
+
+    function handleDelete() {
+        deleteTodo(todo.id)
+    }
+
     return (
         <>
             <div className='todo'>
-                <input type='checkbox'></input>
+                <input type='checkbox' checked={todo.completed} onChange={handleChange}></input>
                 <div>{todo.name}</div>
-                <button>Delete</button>
+                <button onClick={handleDelete}>Delete</button>
                 <button>Edit</button>
             </div>
         </>
