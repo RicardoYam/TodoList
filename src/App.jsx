@@ -19,7 +19,7 @@ function App() {
   }, [todoList])
 
   const addTask = (task) => {
-    setTodoList([...todoList, { id: uuidv4(), name: task, completed: false }])
+    setTodoList([...todoList, { id: uuidv4(), name: task, completed: false, time: Date.now() }])
   }
 
   const toggleTodo = (id) => {
@@ -38,7 +38,10 @@ function App() {
     <div className='container'>
       <div className='title'>Todo List</div>
       <AddTask addTask={addTask}></AddTask>
-      <Todolist todoList={todoList} toggleTodo={toggleTodo} deleteTodo={deleteTodo}></Todolist>
+      <div className='todo-list'>
+        <Todolist todoList={todoList} toggleTodo={toggleTodo} deleteTodo={deleteTodo}></Todolist>
+      </div>
+
     </div>
   )
 }

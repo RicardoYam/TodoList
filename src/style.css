@@ -24,20 +24,100 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     width: 100%;
     min-height: 100vh;
-    background: #8360c3;
-    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
-    background: linear-gradient(to right, #2ebf91, #8360c3);
+    background: #f8f8ff;
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: Myfont;
 }
 
 .container {
-	width: 90%;
-	max-width: 1200px;
-	margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.add-taskbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.add-btn {
+    padding: 10px;
+    background-color: #686cf4;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 60px;
+    text-align: center;
+    padding: 30px;
+}
+
+.todo-list {
+    background: #ecedf6;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.782);
+    border-radius: 8px;
+}
+
+.todo-checkbox {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.todo-text {
+    flex-grow: 1;
+    white-space: normal;
+    overflow-wrap: break-word;
+    margin-right: 10px;
+}
+
+.todo-time {
+    font-size: 14px;
+    color: black;
+    margin-top: 4px;
+}
+
+.todo-btn {
+    flex-shrink: 0;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.todo-button:hover {
+    opacity: 0.7;
+}
+
+
+@font-face {
+    font-family: 'Myfont';
+    src: local('Myfont'),
+        url('./asset/ProtestStrike-Regular.ttf') format('truetype');
 }

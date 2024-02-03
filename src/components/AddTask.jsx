@@ -12,10 +12,10 @@ function AddTask({ addTask }) {
     }
 
     return (
-        <>
-            <input type='text' ref={taskInput}></input>
-            <button className='btn' onClick={handleClick}>Add Task</button>
-        </>
+        <div className='add-taskbar'>
+            <input className='add-input' type='text' ref={taskInput}></input>
+            <button className='add-btn' onClick={handleClick}>Add Task</button>
+        </div>
     )
 }
 
