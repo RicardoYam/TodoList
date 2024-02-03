@@ -12,7 +12,7 @@ A simple project with basic function, aim to help **beginner** to learn `React.j
 
 ### What we have
 
-- Using the Hooks
+- Using Hooks
 - Using React icons
 - CSS Styles
 - More...
